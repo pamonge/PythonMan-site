@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+}
+
+.pythonLogo {
+    margin-right: 15%;
+}
+
+.navLinksList {
+    display: flex;
+    align-items: center;
+}
+
+.navItem {
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 2%;
+    width: 120px;
+    transition: ease 0.7s all;
+}
+
+.navItem:hover {
+    color: var(--clr-pale-blue);
+    text-decoration: underline;
+}
