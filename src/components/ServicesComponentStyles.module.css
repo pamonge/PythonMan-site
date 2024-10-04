@@ -16,7 +16,7 @@
     margin-bottom: 5%;
 }
 
-.secTittle {
+.secTitle {
     margin-top: 10%;
     margin-bottom: 5%;
     text-align: center;
@@ -48,7 +48,8 @@
 
 .imgCard {
     margin: 5%;
-    background: linear-gradient(rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0.94) );
+    background: linear-gradient(rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0.94));
+    z-index: 1;
 }
 
 .img {

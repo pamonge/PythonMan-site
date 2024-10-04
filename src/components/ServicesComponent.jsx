@@ -8,7 +8,7 @@ export const ServicesComponent = () => {
 	return (
 		<div className={styles.servicesContainer}>
 			<div className={styles.overlay}>
-				<h3 className={styles.secTittle}>SERVICIOS</h3>
+				<h3 className={styles.secTitle}>SERVICIOS</h3>
 				<p>Llevamos tu negocio al siguiente nivel</p>
 				<div className={styles.imgContainer}>
 					<div >
@@ -16,7 +16,7 @@ export const ServicesComponent = () => {
 							<img className={styles.img} src={tablet} alt="tablet" />
 						</div>
 						<div>
-							<h3 className={styles.thTittle}>DESARROLLO WEB</h3>
+							<h3 className={styles.thTitle}>DESARROLLO WEB</h3>
 							<p>Contactame</p>
 						</div>
 					</div>

@@ -6,7 +6,7 @@ export const BiographyComponent = () => {
   return (
     <div className={styles.container}>
 		<div className={styles.textSection}>
-			<h3 className={styles.secTittle}>BIOGRAFÍA</h3>
+			<h3 className={styles.secTitle}>BIOGRAFÍA</h3>
 			<p>
 				Mi nombre es Adolfo González Hernández, y desde 2021 incursioné en el sector TI de una forma casi casual,    habiendo sido mánager de proyectos editoriales 
 				en Estudio Silveria, S.L. desde el año 2004 hasta 
