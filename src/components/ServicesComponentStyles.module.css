@@ -1,3 +1,56 @@
-.servicesComponent {
+.servicesContainer {
+    height: 150vh;
     background-image: url(../assets/images/backgrounds/krea.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay {
+    height: 150vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.94));
+    z-index: 1;
+}
+
+.overlay p {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.secTittle {
+    margin-top: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+    background: linear-gradient(#bedef5, #016ca5);
+    font-size: 40px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.imgContainer {
+    display: flex;
+}
+
+.imgContainer h3 {
+    text-align: center;
+    margin: 3% 0;
+    background: linear-gradient(#bedef5, #016ca5);
+    font-size: 35px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.imgContainer p {
+    text-decoration: underline;
+   text-underline-offset: 5px;
+}
+
+.imgCard {
+    margin: 5%;
+    background: linear-gradient(rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0.94) );
+}
+
+.img {
+    border-radius: 25px;
 }

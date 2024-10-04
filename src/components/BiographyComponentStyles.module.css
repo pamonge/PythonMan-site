@@ -14,26 +14,14 @@
 }
 
 .secTittle {
-    background: linear-gradient(#016ca5, #ffffff, #bedef5);/* Ver los colores del gradiente */
+    background: linear-gradient(#016ca5, #bedef5);
     margin-top: 6rem;
     margin-bottom: 3rem;
-    font-size: 60px;
+    font-size: 40px;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 300% 300%;
-    animation: gradientAnimation 5s ease infinite;
 }
-
-
-/* @keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-} */
 
 .imgContainer {
     display: flex;
