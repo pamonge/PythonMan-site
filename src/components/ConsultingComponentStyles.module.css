@@ -1,0 +1,29 @@
+.consultingContainer {
+    height: 200vh;
+    background-image: url(../assets/images/backgrounds/ecualizer.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    display: flex;
+    justify-content: space-between;
+}
+
+.textConsulting {
+    text-align: center;
+    max-width: 30%;
+    margin: 0 5%;
+}
+
+.thinkingMan {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.imgCellPhoneMan {
+    max-width: 100%;
+    transform: translate(30%, -55%) scaleX(-1);
+    z-index: 1;
+    border-radius: 50%;
+}
