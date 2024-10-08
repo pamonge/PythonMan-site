@@ -1,0 +1,15 @@
+.whatsAppLink {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.whatsAppLink img {
+    width: 50px;
+}
+
+.whatsAppLink p {
+    margin-left: 15px;
+    font-size: 30px;
+}

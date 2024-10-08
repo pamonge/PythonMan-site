@@ -16,6 +16,21 @@
     margin: 0 5%;
 }
 
+.textConsulting h3 {
+    text-align: center;
+    background: linear-gradient(#016ca5, #bedef5);
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    font-size: 40px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+
+.textConsulting p {
+    margin-bottom: 7%;
+}
+
 .thinkingMan {
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
