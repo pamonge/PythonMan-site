@@ -1,0 +1,19 @@
+.mailLink {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.mailLink img {
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.mailLink p {
+    padding-top: 2%;
+    margin-left: 15px;
+    font-size: 30px;
+    z-index: 1;
+}

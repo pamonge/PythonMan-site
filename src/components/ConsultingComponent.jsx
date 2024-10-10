@@ -3,6 +3,7 @@ import styles from './ConsultingComponentStyles.module.css'
 import consultingImg from '../assets/images/general imgs/thinking man.jpeg'
 import consultingCellPhone from '../assets/images/general imgs/man with smartphone.jpeg'
 import { WhatsAppComponent } from './WhatsAppComponent'
+import { MailComponent } from './MailComponent'
 
 export const ConsultingComponent = () => {
     return (
@@ -19,6 +20,7 @@ export const ConsultingComponent = () => {
                         ¡Aprovecha la oportunidad de contactarme por teléfono o WhatsApp sin compromiso alguno, pidéndome presupuesto y orientación sobre nuestros servicios sin compromiso alguno!.
                     </p>
                     <WhatsAppComponent />
+                    <MailComponent />
                 </div>
             </div>
         </div>
