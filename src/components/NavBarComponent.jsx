@@ -24,7 +24,7 @@ export const NavBarComponent = () => {
                 <NavLink to="/booking" className={styles.navLink} >BOOKING</ NavLink>
             </li>
             <li className={styles.navItem}>
-                <NavLink to="/store" className={styles.navLink} >TIENDA</ NavLink>
+                <NavLink to="/store" className={styles.navLink} >PRODUCTOS</ NavLink>
             </li>
             <li className={styles.navItem}>
                 <NavLink to="/contact" className={styles.navLink} >CONTACTO</ NavLink>

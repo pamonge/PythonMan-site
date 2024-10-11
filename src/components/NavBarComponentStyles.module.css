@@ -16,11 +16,11 @@
     font-size: 17px;
     font-weight: bold;
     margin: 2%;
-    width: 120px;
+    width: 130px;
     transition: ease 0.7s all;
 }
 
 .navItem:hover {
     color: var(--clr-pale-blue);
-    text-decoration: underline;
+    text-shadow: 1px 1px ;
 }

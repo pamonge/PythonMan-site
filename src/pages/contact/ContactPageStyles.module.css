@@ -1,0 +1,6 @@
+.contactContainer {
+    height: 100vh;
+    background: url(../../assets/images/backgrounds/cubik.png);
+    background-position: center;
+    background-size: cover;
+}

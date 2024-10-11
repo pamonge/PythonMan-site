@@ -65,7 +65,7 @@ body {
 }
 
 img {
-	display: block;
+	/* display: block; Ver en que afecta */ 
 	max-width: 100%;
 }
 

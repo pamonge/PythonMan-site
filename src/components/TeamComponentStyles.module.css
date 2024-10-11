@@ -1,3 +1,17 @@
 .teamContainer {
-    display: flex;
+    display: flex;          
+    justify-content: center; 
+    align-items: flex-start; 
+    flex-wrap: wrap;       
+}
+
+.teamGrid {
+    display: grid;        
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;            
+    width: 100%;          
+}
+
+.teamGrid div {
+    text-align: center;  
 }
