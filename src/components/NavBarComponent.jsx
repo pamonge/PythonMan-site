@@ -21,7 +21,7 @@ export const NavBarComponent = () => {
                 <NavLink to="/blog" className={styles.navLink} >BLOG</ NavLink>
             </li>
             <li className={styles.navItem}>
-                <NavLink to="/booking" className={styles.navLink} >BOOKING</ NavLink>
+                <NavLink to="/booking" className={styles.navLink} >RESERVA ONLINE</ NavLink>
             </li>
             <li className={styles.navItem}>
                 <NavLink to="/store" className={styles.navLink} >PRODUCTOS</ NavLink>

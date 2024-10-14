@@ -6,7 +6,10 @@ import { BookingPage } from './pages/bookingPage/BookingPage'
 import { AboutPage } from './pages/about/AboutPage'
 import { ContactPage } from './pages/contact/ContactPage'
 import { StorePage } from './pages/storepage/StorePage'
+import { LoginPage } from './pages/Login/LoginPage'
+import { RegisterPage } from './pages/register/RegisterPage'
 import { NavBarComponent } from './components/NavBarComponent'
+
 
 import './index.css'
 
@@ -21,6 +24,8 @@ export const PythonManApp = () => {
             <Route path='/booking' element={ <BookingPage /> } />
             <Route path='/store' element={ <StorePage /> } />
             <Route path='/contact' element={ <ContactPage /> } />
+            <Route path='/login' element={ <LoginPage /> } />
+            <Route path='/register' element={ <RegisterPage /> } />
             <Route path='/*' element= { <Navigate to='/' /> } />
         </Routes>
     </>
