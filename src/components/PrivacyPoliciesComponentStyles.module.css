@@ -1,0 +1,28 @@
+.ppContainer {
+    background: linear-gradient( #000000b9, #000000e9);
+    width: 100vw;
+    min-height: 100vh;
+    margin: 5%;
+    text-align: justify;
+}
+
+.ppText {
+    width: 85%;
+}
+
+.ppText h3 {
+    text-align: center;
+    background: linear-gradient(#016ca5, #bedef5);
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    font-size: 40px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+
+.ppText ol li {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 1.5%;
+}
