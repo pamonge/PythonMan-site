@@ -9,9 +9,11 @@ import { StorePage } from './pages/storepage/StorePage'
 import { LoginPage } from './pages/Login/LoginPage'
 import { RegisterPage } from './pages/register/RegisterPage'
 import { NavBarComponent } from './components/NavBarComponent'
-
+import { PrivacyPoliciesPage } from './pages/privacyPolicies/PrivacyPoliciesPage'
 
 import './index.css'
+import { TermsAndConditionsPage } from './pages/TermsAndConditions/TermsAndConditionsPage'
+
 
 export const PythonManApp = () => {
   return (
@@ -26,6 +28,8 @@ export const PythonManApp = () => {
             <Route path='/contact' element={ <ContactPage /> } />
             <Route path='/login' element={ <LoginPage /> } />
             <Route path='/register' element={ <RegisterPage /> } />
+            <Route path='/privacy-policies' element={ <PrivacyPoliciesPage /> } />
+            <Route path='/terms-conditions' element={ <TermsAndConditionsPage /> } />
             <Route path='/*' element= { <Navigate to='/' /> } />
         </Routes>
     </>

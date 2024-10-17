@@ -19,12 +19,12 @@ export const HomePage = () => {
 
 return (
 	<div className={styles.container}>
-	<div className={styles.overlay}>
-		<img className={styles.initialBigLogo} src={pythonBackImg} alt="Logo" />
-		<BiographyComponent />
-		<ServicesComponent />
-		<ConsultingComponent />
-	</div>
+		<div className={styles.overlay}>
+			<img className={styles.initialBigLogo} src={pythonBackImg} alt="Logo" />
+			<BiographyComponent />
+			<ServicesComponent />
+			<ConsultingComponent />
+		</div>
 	</div>
 )
 }

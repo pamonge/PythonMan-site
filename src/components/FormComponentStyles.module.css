@@ -50,7 +50,7 @@
 }
 
 .form input[type="submit"]:hover {
-    background: linear-gradient(270deg, rgba(0, 130, 138, 0.977) 0%, rgba(3, 194, 198, 0.977) 50%, rgba(217, 217, 217, 0.977) 100%    );
+    background: linear-gradient(270deg, rgba(0, 130, 138, 0.98) 0%, rgba(3, 194, 198, 0.98) 50%, rgba(217, 217, 217, 0.98) 100%    );
     box-shadow: 3px 3px 5px;
 }
 
