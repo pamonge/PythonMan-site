@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './TermsAndConditionsComponentStyles.module.css'
+import { ButtonComponent } from './ButtonComponent'
 
 export const TermsAndConditionsComponent = () => {
   return (
@@ -45,6 +46,10 @@ export const TermsAndConditionsComponent = () => {
                     Si tiene alguna pregunta sobre estos términos, puede contactarnos a través de <NavLink to={"/contact"} >los siguiente medios</NavLink>.
                 </p>
             </ol>
+            <div className={styles.buttonContainer}>
+                <ButtonComponent to='/register' description='Volver' />
+                <ButtonComponent to='/' description='Inicio' />
+            </div>
         </div>
     </div>
   )

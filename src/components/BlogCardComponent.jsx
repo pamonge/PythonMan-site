@@ -1,15 +1,14 @@
 import React from 'react'
 import styles from './BlogCardComponentStyles.module.css'
-import { NavLink } from 'react-router-dom'
+import { ButtonComponent } from './ButtonComponent.jsx'
 
 export const BlogCardComponent = () => {
     return (
         <div className={styles.blogContainer}>
-            <p className={styles.blogLinks}>
-                <NavLink to={'/login'} >Ingresar</NavLink> / 
-                <NavLink to={'/register'} >Registrarse</NavLink>     
-            </p>
-            
+            <div className={styles.buttonContainer}>
+                <ButtonComponent to='/login' description='Ingresar' />  
+                <ButtonComponent to='/Register' description='Registrarse' /> 
+            </div>
             <div className={styles.blogCard}>
                 <p>Autor - Cuando se publico - Tiempo de lectura</p>
                 <h2>Titulo del posteo</h2>

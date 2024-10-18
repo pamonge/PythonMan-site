@@ -6,6 +6,7 @@ export const BlogPage = () => {
   return (
     <div className={styles.blogContainer}>
         <BlogCardComponent />
+        
     </div>
   )
 }
