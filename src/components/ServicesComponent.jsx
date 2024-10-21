@@ -3,6 +3,7 @@ import styles from './ServicesComponentStyles.module.css'
 import tablet from '../assets/images/general imgs/woman with tablet.jpeg'
 import dron from '../assets/images/general imgs/dron hold in hand.jpeg'
 import vrGlasses from '../assets/images/general imgs/vr glasses.jpeg'
+import { ButtonComponent } from './ButtonComponent'
 
 export const ServicesComponent = () => {
 	return (
@@ -17,7 +18,6 @@ export const ServicesComponent = () => {
 						</div>
 						<div>
 							<h3 className={styles.thTitle}>DESARROLLO WEB</h3>
-							<p>Contactame</p>
 						</div>
 					</div>
 					<div>
@@ -26,7 +26,6 @@ export const ServicesComponent = () => {
 						</div>
 						<div>
 							<h3>SEGURIDAD INFORMÁTICA</h3>
-							<p>Contactame</p>
 						</div>
 					</div>
 					<div>
@@ -35,11 +34,10 @@ export const ServicesComponent = () => {
 						</div>
 						<div>
 							<h3>ANALISIS DE DATOS</h3>
-							<p>Contactame</p>
 						</div>
 					</div>
-					
 				</div>
+				<ButtonComponent to='/contact' description='Contactame' />
 			</div>
 		</div>
 	)
