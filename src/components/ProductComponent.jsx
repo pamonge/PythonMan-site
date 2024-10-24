@@ -1,7 +1,9 @@
 import React from 'react'
+import { ButtonComponent } from '../components/ButtonComponent'
 import styles from './ProductComponentStyles.module.css'
 import basicWeb from '../assets/images/general imgs/webSiteProduct.png'
 import dataAnalisis from '../assets/images/general imgs/dataAnalisisProduct.png'
+import consulting from '../assets/images/general imgs/consulting.png'
 
 export const ProductComponent = () => {
   return (
@@ -19,8 +21,14 @@ export const ProductComponent = () => {
                 <p>Permite acceso al sistema desde cualquier plataforma en cualquier lugar y momento.</p>
             </div>
             <div className={styles.product}>
-                <p>aproveche al máximo el poder de la web y los datos para crecer de manera inteligente.</p>
+                <img src={consulting} alt="Consulting" />
+                <h4>CONSULTORIA INFORMÁTICA</h4>
+                <p>Contactese para agendar su reunión. Te ayudamos a tomar decisiones estratégicas para mejorar tu infraestructura tecnológica.</p>
+            </div>
+            <div className={styles.product}>
+                <p>Aproveche al máximo el poder de la web y los datos para crecer de manera inteligente.</p>
                 <p>Nosotros lo ayudamos a lograrlo, con soluciones personalizadas que impulsen su éxito.</p>
+                <ButtonComponent to='/contact' description='Contactame!'/>
             </div>
         </div>
     </div>
