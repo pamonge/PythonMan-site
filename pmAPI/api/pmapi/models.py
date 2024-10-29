@@ -8,3 +8,10 @@ class Team (models.Model):
 
     def __str__(self):
         return self.name
+
+class BlogPost (models.Model):
+    title = models.CharField(max_length= 100, verbose_name= 'titulo')
+    content = models.TextField(verbose_name= 'texto')
+    image1 = models.ImageField(verbose_name= 'imagen1')
+    image2 = models.ImageField(verbose_name= 'imagen2')
+    image3 = models.ImageField(verbose_name= 'imagen3')
