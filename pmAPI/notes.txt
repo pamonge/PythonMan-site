@@ -1,0 +1,6 @@
+DB Superuser: pmapi_admin
+DB password: pmapi_admin
+
+-----------  --  ------------
+Superuser: pmapi_admin
+password: pmapi_admin

@@ -12,6 +12,6 @@ class Team (models.Model):
 class BlogPost (models.Model):
     title = models.CharField(max_length= 100, verbose_name= 'titulo')
     content = models.TextField(verbose_name= 'texto')
-    image1 = models.ImageField(verbose_name= 'imagen1')
-    image2 = models.ImageField(verbose_name= 'imagen2')
-    image3 = models.ImageField(verbose_name= 'imagen3')
+    image1 = models.ImageField(verbose_name= 'imagen1', null=True, blank=True)
+    image2 = models.ImageField(verbose_name= 'imagen2', null=True, blank=True)
+    image3 = models.ImageField(verbose_name= 'imagen3', null=True, blank=True)
