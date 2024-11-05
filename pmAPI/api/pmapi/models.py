@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import date
 
 # Create your models here.
 class Team (models.Model):
@@ -11,7 +12,10 @@ class Team (models.Model):
 
 class BlogPost (models.Model):
     title = models.CharField(max_length= 100, verbose_name= 'titulo')
+    date = models.DateField(default=date.today )
+    author = models.CharField(max_length= 50, verbose_name= 'autor')
+    readingTime = models.IntegerField(null= True, blank= True, default= 3)
     content = models.TextField(verbose_name= 'texto')
-    image1 = models.ImageField(verbose_name= 'imagen1', null=True, blank=True)
-    image2 = models.ImageField(verbose_name= 'imagen2', null=True, blank=True)
-    image3 = models.ImageField(verbose_name= 'imagen3', null=True, blank=True)
+    image1 = models.ImageField(verbose_name= 'imagen1', null= True, blank= True)
+    image2 = models.ImageField(verbose_name= 'imagen2', null= True, blank= True)
+    image3 = models.ImageField(verbose_name= 'imagen3', null= True, blank= True)

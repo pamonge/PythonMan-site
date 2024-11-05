@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './BlogCardComponentStyles.module.css'
 import { ButtonComponent } from './ButtonComponent.jsx'
 
-export const BlogCardComponent = () => {
+export const BlogCardComponent = ({ blogData }) => {
     return (
         <div className={styles.blogContainer}>
             <div className={styles.buttonContainer}>
@@ -10,9 +10,15 @@ export const BlogCardComponent = () => {
                 <ButtonComponent to='/Register' description='Registrarse' /> 
             </div>
             <div className={styles.blogCard}>
-                <p>Autor - Cuando se publico - Tiempo de lectura</p>
-                <h2>Titulo del posteo</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sapiente provident eius at maiores culpa accusantium, quasi corporis blanditiis in atque assumenda debitis. Cupiditate hic, quisquam assumenda ad ullam aspernatur.</p>  
+
+                {blogData.map((postData) => {
+                    <div>
+                        <p>{postData.author} - {postData.date} - {postData.readingTime}</p>
+                        <h2>{postData.title}</h2>
+                        <p>{postData.content}</p>
+                    </div>
+                })}
+                
             </div>
         </div>
     )  

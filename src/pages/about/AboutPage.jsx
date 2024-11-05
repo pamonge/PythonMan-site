@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './AboutPageStyles.module.css'
 import { TeamComponent } from '../../components/TeamComponent'
+import { DataFetcherComponent } from '../../components/DataFetcherComponent'
 
 
 export const AboutPage = () => {
@@ -14,7 +15,13 @@ return (
 				Este es el actual equipo de colaboradores y desarrolladores o especialistas en diversas disciplinas en PYTHON MAN. Aquí mostramos una breve descripción de todos ellos, sin excluir a ninguno, como una pequeña biografía de sus habilidades y destrezas profesionales:
 			</p>	
 		</div>
-		<TeamComponent />
+		<div>
+			<DataFetcherComponent 
+			endPoint='/team'
+			renderData={(data) => <TeamComponent teamData={data}/> }
+			/>
+		</div>
+		
 	</div>
 )
 }

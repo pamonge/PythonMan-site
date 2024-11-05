@@ -9,16 +9,22 @@ export const DataFetcherComponent = ({endPoint, renderData}) => {
 		useEffect(() => {
 			const fetchData = async () => {
 				try {
-
+					const responce = await axiosInstnce.get(endPoint)
 				} catch (error) {
 					setError(error.message)
 				} finally {
 					setLoading(false)
 				}
 			}
-		})
+			fetchData()
+		},[endPoint])
+
+		if (loading) return <p>Cargando...</p>
+		if (error) return <p>Ha ocurrido un error: {error}</p>
 
 	return (
-		<div>DataComponent</div>
+		<>
+			{renderData(data)}
+		</>
 	)
 }
