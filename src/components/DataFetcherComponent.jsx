@@ -1,15 +1,17 @@
 import React, {useEffect, useState} from 'react'
-import axiosInstnce from '../axiosInstance'
+import axiosInstance from '../axiosInstance'
 
 export const DataFetcherComponent = ({endPoint, renderData}) => {
 		const [data, setData] = useState([])
-		const [loading, setLoading] = useState(True)
+		const [loading, setLoading] = useState(true)
 		const [error, setError] = useState(null)
 
 		useEffect(() => {
 			const fetchData = async () => {
 				try {
-					const responce = await axiosInstnce.get(endPoint)
+					const response = await axiosInstance.get(endPoint)
+					setData(response.data)
+					console.log(response)
 				} catch (error) {
 					setError(error.message)
 				} finally {

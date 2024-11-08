@@ -7,7 +7,7 @@ export const BlogPage = () => {
   return (
     <div className={styles.blogContainer}>
         <DataFetcherComponent 
-        endPoint='/blog'
+        endPoint='blog/'
         renderData={(data) => <BlogCardComponent blogData={data}/>}
         />        
     </div>

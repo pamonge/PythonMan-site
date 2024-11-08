@@ -11,14 +11,14 @@ export const BlogCardComponent = ({ blogData }) => {
             </div>
             <div className={styles.blogCard}>
 
-                {blogData.map((postData) => {
-                    <div>
+                {blogData.map((postData) => (
+                    <div key={postData.id}> 
                         <p>{postData.author} - {postData.date} - {postData.readingTime}</p>
                         <h2>{postData.title}</h2>
                         <p>{postData.content}</p>
                     </div>
-                })}
-                
+                ))}
+
             </div>
         </div>
     )  
