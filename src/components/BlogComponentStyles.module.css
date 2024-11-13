@@ -1,0 +1,16 @@
+.blogContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+}
+
+.blogCardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.buttonContainer {
+    display: flex;
+}

@@ -9,4 +9,4 @@ class TeamSerializers (serializers.ModelSerializer):
 class BlogPostSerializers (serializers.ModelSerializer):
     class Meta:
         model = BlogPost
-        fields = ['id', 'title', 'content', 'image1', 'image2', 'image3']
+        fields = '__all__'  #['id', 'title', 'author', 'redingTime', 'date', 'content', 'image1', 'image2', 'image3']

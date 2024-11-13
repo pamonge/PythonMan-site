@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './TeamComponentStyles.module.css'
+import { TeamMemberComponent } from './TeamMemberComponent'
 
 export const TeamComponent = ({ teamData }) => {
     return (
@@ -7,13 +8,7 @@ export const TeamComponent = ({ teamData }) => {
             <div className={styles.teamGrid}>
 
                 {teamData.map((member) => (
-                    <div key={member.id}>
-                        <img src={member.picture} alt={member.name} />
-                        <p>{member.name}</p>
-                        <p>
-                            {member.description}
-                        </p>
-                    </div>
+                    <TeamMemberComponent teamMember={member} />
                 ))}
                 
             </div>
