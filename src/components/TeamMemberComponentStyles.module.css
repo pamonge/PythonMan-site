@@ -1,0 +1,9 @@
+.memberContainer {
+    display: flex;
+}
+
+.memberText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

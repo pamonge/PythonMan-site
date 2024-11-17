@@ -8,7 +8,7 @@ export const TeamComponent = ({ teamData }) => {
             <div className={styles.teamGrid}>
 
                 {teamData.map((member) => (
-                    <TeamMemberComponent teamMember={member} />
+                    <TeamMemberComponent key={member.id} teamMember={member} />
                 ))}
                 
             </div>
