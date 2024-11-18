@@ -1,9 +1,15 @@
 .memberContainer {
     display: flex;
+    max-width: 80%;
 }
 
 .memberText {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.memberName {
+    font-weight: bolder;
+
 }

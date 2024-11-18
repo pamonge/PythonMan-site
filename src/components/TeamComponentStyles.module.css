@@ -2,14 +2,15 @@
     display: flex;          
     justify-content: center; 
     align-items: flex-start; 
-    flex-wrap: wrap;       
+    flex-wrap: wrap;   
+    min-height: 100vh;    
 }
 
 .teamGrid {
     display: grid;        
     grid-template-columns: repeat(2, 1fr); 
-    gap: 20px;            
-    width: 100%;          
+    gap: 3rem;          
+    width: 90%;          
 }
 
 .teamGrid div {
