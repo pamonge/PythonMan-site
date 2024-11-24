@@ -19,3 +19,6 @@ class BlogPost (models.Model):
     image1 = models.ImageField(verbose_name= 'imagen1', null= True, blank= True)
     image2 = models.ImageField(verbose_name= 'imagen2', null= True, blank= True)
     image3 = models.ImageField(verbose_name= 'imagen3', null= True, blank= True)
+
+    def __str__(self):
+        return self.title

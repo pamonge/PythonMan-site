@@ -18,7 +18,7 @@ export const NavBarComponent = () => {
                 <NavLink to="/about" className={styles.navLink} >ACERCA DE</ NavLink>
             </li>
             <li className={styles.navItem}>
-                <NavLink to="/blog" className={styles.navLink} >BLOG</ NavLink>
+                <NavLink to="/blog" className={styles.navLink} >ARTÍCULOS</ NavLink>
             </li>
             {/* <li className={styles.navItem}>
                 <NavLink to="/booking" className={styles.navLink} >RESERVA ONLINE</ NavLink>

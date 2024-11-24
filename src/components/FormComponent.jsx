@@ -67,9 +67,14 @@ export const FormComponent = () => {
 							onChange={handleChange}
 							autoComplete='off'
 						/>
-						{errors.subject && (
-							<span className={styles.error} aria-live="polite">{errors.subject}</span>
-						)}
+						<div className={styles.errorsContainer} >
+			
+							{errors.subject && (
+								<span className={styles.error} aria-live="polite">{errors.subject}</span>
+							)}
+
+						</div>
+						
 						
 					</div>
 					<div className={styles.formGroup}>

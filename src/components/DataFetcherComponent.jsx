@@ -11,7 +11,7 @@ export const DataFetcherComponent = ({endPoint, renderData}) => {
 				try {
 					const response = await axiosInstance.get(endPoint)
 					setData(response.data)
-					console.log(response)
+					console.log(response.data)
 				} catch (error) {
 					setError(error.message)
 				} finally {

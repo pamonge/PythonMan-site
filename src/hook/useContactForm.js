@@ -46,6 +46,7 @@ export const useContactForm = (previousState) => {
 	const sendEmail = (e) => {
 		e.preventDefault();
 
+		// Falta agregar la logica para mandar mensajes
 
 	}
 
