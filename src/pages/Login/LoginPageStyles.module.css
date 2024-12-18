@@ -1,0 +1,29 @@
+.loginContainer {
+    background: url(../../assets/images/backgrounds/greenWaves.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loginContainer h3 {
+    text-align: center;
+    background: linear-gradient(#016ca5, #bedef5);
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+
+.buttons {
+    display: flex;
+}
+
+@media screen and (max-width: 400px) {
+	.buttons {
+        flex-direction: column;
+    }
+}	

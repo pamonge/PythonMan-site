@@ -1,0 +1,6 @@
+.storeContainer {
+    min-height: 100vh;
+    background: url(../../assets/images/backgrounds/lightening.png);
+    background-position: center;
+    background-size: cover;
+}

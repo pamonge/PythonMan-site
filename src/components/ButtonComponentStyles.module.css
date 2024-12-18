@@ -1,0 +1,19 @@
+.buttonContainer {
+    display: flex;
+}
+
+.button {
+    padding:10px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(#A4D0F0, #006BA6);
+    margin: 20px 20px;
+    width: 150px;
+    color: var(--clr-leter-grey);
+    transition: all ease .7s;
+}
+
+.button:hover {
+    background: linear-gradient(#8bb2ce, #005887);
+    box-shadow: 3px 3px 5px;
+}

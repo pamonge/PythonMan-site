@@ -1,0 +1,35 @@
+.contactContainer {
+    background: url(../../assets/images/backgrounds/cubik.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    padding: 5%;
+    gap: 10%;
+    align-items: center;
+}
+
+.dataContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    background: linear-gradient(270deg, rgba(0, 130, 138, 0.9) 0%, rgba(3, 194, 198, 0.9) 50%, rgba(217, 217, 217, 0.9) 100%    );
+}
+
+@media screen and (max-width: 800px) {
+	.contactContainer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px) {
+    .contact {
+        display: flex;
+        flex-direction: row;
+    }
+}

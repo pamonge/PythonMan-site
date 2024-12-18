@@ -1,0 +1,62 @@
+.blogCard {
+    background: linear-gradient(rgba(95, 95, 95, 0.515), rgba(113, 113, 113, 0.784));
+    border: none;
+    border-radius: 25px;
+    box-shadow: 1px 3px 5px;
+    max-width: 100%; 
+    padding: 2%;  
+    margin: 25px; 
+}
+
+.beforeTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.extendButton {
+    width: 2em;
+    height: 2em;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    cursor: pointer;
+    margin: 2%;
+}
+
+.extendButtonBar {
+    width: 70%;
+    height: 10%;
+    background-color: var(--clr-pale-blue);;
+    border-radius: 0.5em;
+}
+
+.extendButtonBar.unclicked:nth-child(1){
+    transform:  translate(50%, 500%) rotate(135deg);
+    transition: ease-out 0.5s;
+}
+.extendButtonBar.unclicked:nth-child(2){
+    transform: translate(-10%, 400%) rotate(45deg) ;
+    transition: ease-out 0.5s;
+}
+
+.extendButtonBar.clicked:nth-child(1){
+    transform:  translate(20%, 500%) rotate(135deg);
+    transition: ease-out 0.5s;
+}
+.extendButtonBar.clicked:nth-child(2){
+    transform: translate(15%, 400%) rotate(45deg) ;
+    transition: ease-out 0.5s;
+}
+
+.hidden{
+    max-height: 30em;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.visible {
+    height: fit-content;
+    overflow: visible;
+    cursor: default;
+}

@@ -1,0 +1,27 @@
+.aboutContainer {
+    background: url(../../assets/images/backgrounds/LightSpeed.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.textContainer {
+    text-align: center;
+    margin: 0 7%;
+}
+
+.textContainer {
+    padding: 5% 0 3% 0;
+}
+
+h2 {
+    text-align: center;
+    margin: 3%;
+    background: linear-gradient(#bedef5, #016ca5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    margin: 3%;
+}

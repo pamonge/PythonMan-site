@@ -1,0 +1,6 @@
+.termsContainer {
+    background: url(../../assets/images/backgrounds/hexagon.png);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
