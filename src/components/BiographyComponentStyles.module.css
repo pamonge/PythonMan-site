@@ -1,16 +1,18 @@
 .container {
-    height: 100vh;
     background-color: rgba(0, 0, 0, 0.457);
     position: relative;
     z-Index: 2;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    display: flex;
+    margin-left: 8%;
+    margin-right: 8%;
+    
 }
 
 .textSection {
     width: 30%;
-    margin-left: 8%;
 }
 
 .textSection p {
@@ -20,21 +22,33 @@
 .secTitle {
     text-align: center;
     background: linear-gradient(#016ca5, #bedef5);
-    margin-top: 6rem;
-    margin-bottom: 3rem;
-    font-size: 40px;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
 }
 
 .imgContainer {
-    display: flex;
+    height: fit-content;
     max-width: 70%;
-    
+    margin-left: 0;
+    margin-right: auto;
 }
 
 .biographyClock {
     transform: scaleX(-1);
-    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        display: block;
+        align-items: center;
+    }
+    .imgContainer {
+        width: 100%;
+        margin-left: auto;
+    }
+    .textSection {
+        width: 100%;
+    }
 }

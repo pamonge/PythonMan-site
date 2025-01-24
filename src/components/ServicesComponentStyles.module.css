@@ -1,14 +1,21 @@
 .servicesContainer {
-    height: 150vh;
     background-image: url(../assets/images/backgrounds/krea.png);
     background-position: center;
+    z-Index: 3;
     background-size: cover;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    
 }
 
 .overlay {
-    height: 150vh;
     background: linear-gradient(rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.94));
     z-index: 1;
+    text-align: center;
 }
 
 .overlay {
@@ -35,7 +42,6 @@
     text-align: center;
     margin: 3% 0;
     background: linear-gradient(#bedef5, #016ca5);
-    font-size: 35px;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -54,4 +60,10 @@
 
 .img {
     border-radius: 25px;
+}
+
+@media (max-width: 700px) {
+    .imgContainer {
+        flex-direction: column;
+    }
 }

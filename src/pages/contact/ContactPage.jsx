@@ -13,8 +13,10 @@ export const ContactPage = () => {
 					<h3>CONTACTO</h3>
 				</div>
 				<LocationComponent />
-				<MailComponent />
-				<WhatsAppComponent />
+				<div className={styles.contact}>
+					<MailComponent />
+					<WhatsAppComponent />
+				</div>
 			</div>
 			<div>
 				<FormComponent />	

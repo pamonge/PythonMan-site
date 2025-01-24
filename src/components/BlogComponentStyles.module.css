@@ -13,4 +13,16 @@
 
 .buttonContainer {
     display: flex;
+    margin: 2%;
+}
+
+@media screen and (max-width: 400px) {
+	.buttonContainer {
+        flex-direction: column;
+    }
+    .blogCardContainer {
+        width: 100%;
+        margin: 5%;
+        min-width: 90%;
+    }
 }

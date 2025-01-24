@@ -21,3 +21,9 @@
 .buttons {
     display: flex;
 }
+
+@media screen and (max-width: 400px) {
+	.buttons {
+        flex-direction: column;
+    }
+}	

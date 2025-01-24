@@ -1,14 +1,17 @@
-import React from 'react'
-import styles from './TeamMemberComponentStyles.module.css'
+import React, {useState} from 'react'
 
-export const TeamMemberComponent = ({ teamMember }) => {
+export const TeamMemberComponent = ({ teamMember}) => {
+
 	return (
-		<div key={teamMember.id} className={styles.memberContainer}>
-			<div className={styles.memberText} >
-				<p className={styles.memberName}>{teamMember.name}</p>
-				<p>{teamMember.description}</p>
+		<div>
+			
+			<div key={teamMember.id}>
+				<img src={teamMember.picture} alt={teamMember.name} />
+				<h3>{teamMember.name}</h3>
+				<p>
+					{teamMember.description}
+				</p>
 			</div>
-			<img src={teamMember.picture} alt={teamMember.name} />
 		</div>
 	)
 }

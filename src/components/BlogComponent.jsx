@@ -6,11 +6,10 @@ import { BlogCardComponent } from './BlogCardComponent.jsx'
 export const BlogComponent = ({ blogData }) => {
     return (
         <div className={styles.blogContainer}>
-            <h3>Artículos de interes</h3>
-            {/* <div className={styles.buttonContainer}>
+            <div className={styles.buttonContainer}>
                 <ButtonComponent to='/login' description='Ingresar' />  
                 <ButtonComponent to='/Register' description='Registrarse' /> 
-            </div> */}
+            </div>
             <div className={styles.blogCardContainer}>
 
                 {blogData.map((postData) => (

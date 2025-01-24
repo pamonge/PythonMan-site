@@ -9,7 +9,7 @@ export const ServicesComponent = () => {
 	return (
 		<div className={styles.servicesContainer}>
 			<div className={styles.overlay}>
-				<h3 className={styles.secTitle}>SERVICIOS</h3>
+				<h2 className={styles.secTitle}>SERVICIOS</h2>
 				<p>Llevamos tu negocio al siguiente nivel</p>
 				<div className={styles.imgContainer}>
 					<div >

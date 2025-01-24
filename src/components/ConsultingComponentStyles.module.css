@@ -1,5 +1,4 @@
 .consultingContainer {
-    height: 200vh;
     background-image: url(../assets/images/backgrounds/ecualizer.png);
     background-position: bottom;
     background-repeat: no-repeat;
@@ -21,7 +20,6 @@
     background: linear-gradient(#016ca5, #bedef5);
     margin-top: 6rem;
     margin-bottom: 3rem;
-    font-size: 40px;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
@@ -34,6 +32,7 @@
 .thinkingMan {
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
+    width: 80%;
 }
 
 .imgCellPhoneMan {
@@ -41,4 +40,30 @@
     transform: translate(30%, -55%) scaleX(-1);
     z-index: 3;
     border-radius: 50%;
+    width: 80%;
+}
+
+@media (max-width: 900px) {
+    .overlay {
+        flex-direction: column-reverse;
+    }
+    .textConsulting {
+        max-width: 100%;
+    }
+    .thinkingMan {
+        width: 70%;
+    }
+    
+    .imgCellPhoneMan {
+        width: 70%;
+    }
+}
+
+@media (max-width: 450px) {
+    .contact {
+        display: flex;
+        flex-direction: row;
+        
+        justify-content: center;
+    }
 }

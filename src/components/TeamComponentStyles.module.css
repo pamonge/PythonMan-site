@@ -2,17 +2,23 @@
     display: flex;          
     justify-content: center; 
     align-items: flex-start; 
-    flex-wrap: wrap;   
-    min-height: 100vh;    
+    flex-wrap: wrap;       
 }
 
 .teamGrid {
     display: grid;        
     grid-template-columns: repeat(2, 1fr); 
-    gap: 3rem;          
-    width: 90%;          
+    gap: 20px;            
+    width: 100%;          
 }
 
 .teamGrid div {
     text-align: center;  
+}
+
+@media screen and (max-width: 450px) {
+    .teamGrid {
+        display: flex;  
+        flex-direction: column;           
+    }
 }

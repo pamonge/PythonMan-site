@@ -14,13 +14,15 @@ export const ConsultingComponent = () => {
                     <img className={styles.imgCellPhoneMan} src={consultingCellPhone} alt="" />
                 </div>
                 <div className={styles.textConsulting}>
-                    <h3>CONSULTA GRATUITA</h3>
+                    <h2>CONSULTA GRATUITA</h2>
                     <p>Solo lo mejor.</p>
                     <p>
                         ¡Aprovecha la oportunidad de contactarme por teléfono o WhatsApp sin compromiso alguno, pidéndome presupuesto y orientación sobre nuestros servicios sin compromiso alguno!.
                     </p>
-                    <WhatsAppComponent />
-                    <MailComponent />
+                    <div className={styles.contact}>
+                        <WhatsAppComponent />
+                        <MailComponent />
+                    </div>
                 </div>
             </div>
         </div>
