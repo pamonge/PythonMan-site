@@ -6,7 +6,7 @@ const axiosInstance = axios.create ({
         'Content-Type': 'application/json'
     }
 })
-
+// Funcion para obtener el CSRF de las cookies
 function getCSRFToken() {
     const csrfToken = document.cookie
       .split('; ')
@@ -15,13 +15,8 @@ function getCSRFToken() {
     return csrfToken;
   }
 
-axios.interceptors.request.use(
+axiosInstance.interceptors.request.use(
     (config) => {
-        const token = localStorage.getItem('accessToken');
-        if (token) {
-            config.headers.Authorization = `Bearer ${token}`; 
-        }
-
         const csrfToken = getCSRFToken();
         if (csrfToken) {
           config.headers['X-CSRFToken'] = csrfToken;
