@@ -138,4 +138,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:8000",
+    "http://93.127.163.248",
+    "https://pythonman.org/"
 ]

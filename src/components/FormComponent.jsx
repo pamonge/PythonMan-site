@@ -1,83 +1,119 @@
-import React, { useEffect, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import styles from './FormComponentStyles.module.css'
-import axiosInstance from '../axiosInstance';
+import emailjs from '@emailjs/browser';
 
 export const FormComponent = () => {
-
-	const [formData, setFormData] = useState({
+	const emailRegEx = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+	const genRegEx = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s'-]+$/;
+	const contactForm = useRef();
+	const [ formData, setFormData ] = useState({
 		name: '',
 		email: '',
 		subject: '',
-		message: '',
+		message: ''
 	});
+	
+	const [ errors, setErrors ] = useState({});
 
-	useEffect (() => {
-		axiosInstance.get ('/csrf/')
-			.then(response => {
-				console.log ('CSRF set');
-			})
-			.catch(error => {
-				console.error(`Error setting CSRF: ${error}`);
-			}) 
-	}, []);
+	const validate = () => {
+		const newErrors = {};
 
-	const handleChange = (e) => {
-		const {name, value} = e.target;
-		setFormData({
-			...formData,
-			[name]: value,
-		});
+		if (formData.name.trim().length < 2) {
+			newErrors.name = 'Debe ingresar un nombre valido';
+		} else if (!genRegEx.test(formData.name)) {
+			newErrors.name = 'El nombre contiene caracteres no permitidos';
+		}
+		if (!formData.email.trim()) {
+			newErrors.email = 'El correo es un campo requerido';
+		} else if (!emailRegEx.test(formData.email)) {
+			newErrors.email = 'Debe ingresar un correo valido';
+		}
+		if (formData.subject.trim().length < 2) {
+			newErrors.subject = 'Debe ingresar un asunto valido';
+		} else if (!genRegEx.test(formData.subject)) {
+			newErrors.subject = 'El campo "Asunto" Contiene caracteres no validos';
+		}
+		if (!formData.message.trim() < 10) {
+			newErrors.message = 'El campo "Mensaje" es requerido';
+		}
+		return newErrors;
 	}
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-
-		axiosInstance.post('/contact/', formData)
-			.then(response => {
-				console.log(`Form Submit success: ${response}`)
-			})
-			.catch(error => {
-				console.error(`Error submiting form: ${error}`);
-			});
+	const handlerChange = (e) => {
+		setFormData({
+			...formData,
+			[e.target.name] : e.target.value
+		});
 	};
 
+	const sendEmail = (e) => {
+		e.preventDefault();
+		const validationErrors = validate();
+		if (Object.keys(validationErrors).length > 0) {
+			setErrors(validationErrors);
+			return;
+		}
+		setErrors({});
+
+		emailjs.sendForm(
+			'service_cvfardd',
+			'template_ern4am3',
+			contactForm.current, {
+			publicKey: 'eHMAkLgOdHDoUnZ9Z',
+			}
+		)
+		.then((result) => {
+			console.log(result.text);
+			alert('Correo enviado');
+			contactForm.current.reset();
+		})
+		.catch((error) => {
+			console.log(error.text);
+			alert('Error al enviar el correo')
+		})
+	}
 	return (
 		<div className={styles.formContactContainer} >
 			<div className={styles.formContainer}>
 				<p>¿Te gustaría enviarnos un mensaje en este preciso momento?</p>
 				<p>¡Completa tus datos y envíalo!</p>
-				<form className={styles.form} onSubmit={handleSubmit}> 
+				<form className={styles.form} ref={contactForm} onSubmit={sendEmail}> 
 					<div className={styles.formGroup}>
 						<label>Nombre y apellido</label>
 						<input 
 						name='name'
+						id='name'
+						required
 						value={formData.name}
-						onChange={handleChange}/>
-						<span>Campo Requerido</span>
+						onChange={handlerChange}/>
+						<span className={errors.name ? (styles.spanVisible) : (styles.spanName)}>Campo Requerido</span>
 					</div>
 					<div className={styles.formGroup}>
 						<label>Email</label>
 						<input 
 						name='email'
-						value={formData.email}
-						onChange={handleChange}/>
-						<span>Campo Requerido</span>
+						id='email'
+						required
+						/>
+						<span className={styles.spanEmail}>Campo Requerido</span>
 					</div>
 					<div className={styles.formGroup}>
 						<label>Asunto</label>
 						<input 
 						name='subject'
-						value={formData.subject}
-						onChange={handleChange}/>
-						<span>Campo requerido</span>
+						id='subject'
+						required
+						/>
+						<span className={styles.spanSubject}>Campo requerido</span>
 					</div>
 					<div className={styles.formGroup}>
 						<label>Mensaje</label>
 						<textarea 
 						name='message'
-						value={formData.message}
-						onChange={handleChange}/>	 
-						<span >Debe ingresar el mensaje</span>
+						id='message'
+						required
+						/>	 
+						<span className={styles.spanMessage}>Debe ingresar el mensaje</span>
 					</div>
 					
 					<input type="submit" value="Enviar"/>
