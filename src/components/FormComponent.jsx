@@ -18,7 +18,7 @@ export const FormComponent = () => {
 	const validate = () => {
 		const newErrors = {};
 
-		if (formData.name.trim().length < 2) {
+		if (formData.name.trim().length < 3) {
 			newErrors.name = 'Debe ingresar un nombre valido';
 		} else if (!genRegEx.test(formData.name)) {
 			newErrors.name = 'El nombre contiene caracteres no permitidos';
@@ -33,7 +33,7 @@ export const FormComponent = () => {
 		} else if (!genRegEx.test(formData.subject)) {
 			newErrors.subject = 'El campo "Asunto" Contiene caracteres no validos';
 		}
-		if (!formData.message.trim() < 10) {
+		if (formData.message.trim() < 10) {
 			newErrors.message = 'El campo "Mensaje" es requerido';
 		}
 		return newErrors;
@@ -45,6 +45,15 @@ export const FormComponent = () => {
 			[e.target.name] : e.target.value
 		});
 	};
+
+	const handleReset = () => {
+		setFormData({
+			name: '',
+			email: '',
+			subject:'',
+			message: ''
+		})
+	}
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -66,6 +75,7 @@ export const FormComponent = () => {
 			console.log(result.text);
 			alert('Correo enviado');
 			contactForm.current.reset();
+			handleReset();
 		})
 		.catch((error) => {
 			console.log(error.text);
@@ -86,7 +96,7 @@ export const FormComponent = () => {
 						required
 						value={formData.name}
 						onChange={handlerChange}/>
-						<span className={errors.name ? (styles.spanVisible) : (styles.spanName)}>Campo Requerido</span>
+						<span className={errors.name ? (styles.spanVisible) : (styles.spanHidden)}>Campo Requerido</span>
 					</div>
 					<div className={styles.formGroup}>
 						<label>Email</label>
@@ -94,8 +104,9 @@ export const FormComponent = () => {
 						name='email'
 						id='email'
 						required
-						/>
-						<span className={styles.spanEmail}>Campo Requerido</span>
+						value={formData.email}
+						onChange={handlerChange}/>
+						<span className={errors.email? (styles.spanVisible) : (styles.spanHidden)}>Campo Requerido</span>
 					</div>
 					<div className={styles.formGroup}>
 						<label>Asunto</label>
@@ -103,8 +114,9 @@ export const FormComponent = () => {
 						name='subject'
 						id='subject'
 						required
-						/>
-						<span className={styles.spanSubject}>Campo requerido</span>
+						value={formData.subject}
+						onChange={handlerChange}/>
+						<span className={errors.subject? (styles.spanVisible) : (styles.spanHidden)}>Campo requerido</span>
 					</div>
 					<div className={styles.formGroup}>
 						<label>Mensaje</label>
@@ -112,8 +124,9 @@ export const FormComponent = () => {
 						name='message'
 						id='message'
 						required
-						/>	 
-						<span className={styles.spanMessage}>Debe ingresar el mensaje</span>
+						value={formData.message}
+						onChange={handlerChange}/>	 
+						<span className={errors.message? (styles.spanVisible) : (styles.spanHidden)}>Debe ingresar el mensaje</span>
 					</div>
 					
 					<input type="submit" value="Enviar"/>
