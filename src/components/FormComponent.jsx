@@ -1,19 +1,24 @@
 import React, { useRef, useState } from 'react'
 import styles from './FormComponentStyles.module.css'
 import emailjs from '@emailjs/browser';
+import { ModalComponent } from './ModalComponent';
+import close from '../assets/images/site imgs/close.png'
+import success from '../assets/images/site imgs/success.png'
 
 export const FormComponent = () => {
 	const emailRegEx = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
-	const genRegEx = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s'-]+$/;
-	const contactForm = useRef();
-	const [ formData, setFormData ] = useState({
+	const previousState = {
 		name: '',
 		email: '',
 		subject: '',
 		message: ''
-	});
-	
+	}
+	const genRegEx = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s'-]+$/;
+	const contactForm = useRef();
+	const [ formData, setFormData ] = useState(previousState);
 	const [ errors, setErrors ] = useState({});
+	const [ mailSend, setMailSend ] = useState(false);
+	const [ mailFail, setMailFail ] = useState(false);
 
 	const validate = () => {
 		const newErrors = {};
@@ -47,12 +52,7 @@ export const FormComponent = () => {
 	};
 
 	const handleReset = () => {
-		setFormData({
-			name: '',
-			email: '',
-			subject:'',
-			message: ''
-		})
+		setFormData(previousState)
 	}
 
 	const sendEmail = (e) => {
@@ -68,17 +68,17 @@ export const FormComponent = () => {
 			'service_cvfardd',
 			'template_ern4am3',
 			contactForm.current, {
-			publicKey: 'eHMAkLgOdHDoUnZ9Z',
+			publicKey: 'cambiar por esa clave >>>', //eHMAkLgOdHDoUnZ9Z
 			}
 		)
 		.then((result) => {
 			console.log(result.text);
-			alert('Correo enviado');
-			contactForm.current.reset();
+			setMailSend(true);
 			handleReset();
 		})
 		.catch((error) => {
 			console.log(error.text);
+			setMailFail(true);
 			alert('Error al enviar el correo')
 		})
 	}
@@ -132,7 +132,12 @@ export const FormComponent = () => {
 					<input type="submit" value="Enviar"/>
 				</form>
 			</div>
-		
+			{mailSend && (
+				<ModalComponent isOpen={mailSend} icon={success} message={'Recibimos su mensaje, a la brevedad un representante nuestro se comunicará con usted, Gracias.'} onClose={() => setMailSend(false)} />
+			)}
+			{mailFail && (
+				<ModalComponent isOpen={mailFail} icon={close} message={'Su mensaje no se pudo enviar, estamos experimentando problemas tecnicos, por favor intente nuevamente más tarde. Gracias.'} onClose={()=>setMailFail(false)} />
+			)}
 		</div>
 	)
 }
