@@ -7,6 +7,7 @@ import success from '../assets/images/site imgs/success.png'
 
 export const FormComponent = () => {
 	const emailRegEx = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+	const publicKeyEmail = 'eHMAkLgOdHDoUnZ9Z';
 	const previousState = {
 		name: '',
 		email: '',
@@ -68,7 +69,7 @@ export const FormComponent = () => {
 			'service_cvfardd',
 			'template_ern4am3',
 			contactForm.current, {
-			publicKey: 'cambiar por esa clave >>>', //eHMAkLgOdHDoUnZ9Z
+			publicKey: publicKeyEmail,
 			}
 		)
 		.then((result) => {
@@ -79,7 +80,6 @@ export const FormComponent = () => {
 		.catch((error) => {
 			console.log(error.text);
 			setMailFail(true);
-			alert('Error al enviar el correo')
 		})
 	}
 	return (
